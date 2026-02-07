@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Mystic Tarot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a1a;
+      --bg-card: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --purple: #9b7bf7;
+      --purple-glow: rgba(155,123,247,0.15);
+      --text: #e0dce8;
+      --text-muted: #8a8599;
+      --heading: #f0ecf6;
+      --accent: #c9a0ff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* starfield */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 65%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 90%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 45%, rgba(255,255,255,0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 25% 35%, rgba(155,123,247,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 75% 55%, rgba(155,123,247,0.3) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* purple glow orb */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -180px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(155,123,247,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* header */
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .header .crystal {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 20px rgba(155,123,247,0.5));
+    }
+
+    .header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 36px;
+      color: var(--heading);
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
+    }
+
+    .header .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--purple);
+      letter-spacing: 0.04em;
+    }
+
+    .header .effective {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* sections */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--heading);
+      margin: 18px 0 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 8px 0 16px 20px;
+      list-style: none;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+    }
+
+    ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+      font-size: 10px;
+      top: 4px;
+    }
+
+    a {
+      color: var(--purple);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(155,123,247,0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-color: var(--purple);
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(155,123,247,0.08), rgba(155,123,247,0.02));
+      border: 1px solid rgba(155,123,247,0.15);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-card h2 {
+      border: none;
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--purple);
+      margin: 48px auto;
+      opacity: 0.4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    footer span {
+      color: var(--purple);
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 40px 18px 60px; }
+      .header h1 { font-size: 28px; }
+      section h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span class="crystal">🔮</span>
+      <h1>Mystic Tarot</h1>
+      <p class="subtitle">Privacy Policy</p>
+      <p class="effective">Effective Date: February 7, 2026</p>
+    </header>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>Welcome to Mystic Tarot ("we," "our," or "us"). We respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains what data we collect, how we use it, and your rights regarding that data when you use the Mystic Tarot mobile application (the "App").</p>
+    </section>
+
+    <section>
+      <h2>2. Information We Collect</h2>
+
+      <h3>Account Information</h3>
+      <p>When you create an account, we collect:</p>
+      <ul>
+        <li>Email address</li>
+        <li>Password (stored securely via hashing — we never see your actual password)</li>
+      </ul>
+
+      <h3>Profile Information</h3>
+      <p>To personalize your readings, we collect:</p>
+      <ul>
+        <li>Display name</li>
+        <li>Birth month and day (used to determine your zodiac sign)</li>
+      </ul>
+
+      <h3>Usage Data</h3>
+      <p>We automatically collect:</p>
+      <ul>
+        <li>Tarot readings generated (cards drawn, reading type, and the reading text)</li>
+        <li>Daily usage counts (number of readings per day)</li>
+        <li>Ad interaction data (number of rewarded ads watched)</li>
+        <li>Subscription status (free or premium)</li>
+      </ul>
+
+      <h3>Device Information</h3>
+      <p>We may collect basic device information such as device type, operating system version, and a unique device identifier for push notifications.</p>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and personalize your tarot readings based on your name and zodiac sign</li>
+        <li>Authenticate your account and maintain your session</li>
+        <li>Track daily usage to manage free and premium reading limits</li>
+        <li>Save your reading history so you can revisit past readings</li>
+        <li>Send push notifications (daily reading reminders), if you opt in</li>
+        <li>Process in-app purchases and manage your subscription</li>
+        <li>Improve the App's functionality and user experience</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services</h2>
+      <p>We use the following third-party services that may collect data according to their own privacy policies:</p>
+
+      <div class="info-card">
+        <h3>Supabase</h3>
+        <p>Authentication, database, and server functions. Your account data and reading history are stored securely on Supabase's infrastructure. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></p>
+
+        <h3>OpenAI</h3>
+        <p>We use OpenAI's API to generate your tarot readings. The data sent includes your name, zodiac sign, selected cards, and reading category. No other personal information is sent. <a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></p>
+
+        <h3>Google AdMob</h3>
+        <p>We display ads through Google AdMob. Google may collect device identifiers and usage data for ad targeting purposes. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+        <h3>RevenueCat</h3>
+        <p>We use RevenueCat to manage in-app subscriptions and purchases. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></p>
+
+        <h3>Expo / EAS</h3>
+        <p>The App is built with Expo and may use Expo's notification services. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Data Storage &amp; Security</h2>
+      <p>Your data is stored on Supabase's cloud infrastructure with encryption at rest and in transit. Passwords are hashed and never stored in plain text. We use secure JWT-based authentication for all API communications. While we implement industry-standard security measures, no method of electronic storage is 100% secure.</p>
+    </section>
+
+    <section>
+      <h2>6. Data Retention</h2>
+      <p>We retain your account data and reading history for as long as your account is active. Daily usage data is tracked on a per-day basis and retained for service management. If you delete your account, we will remove your personal data from our active systems within 30 days.</p>
+    </section>
+
+    <section>
+      <h2>7. Your Rights</h2>
+      <p>Depending on your location, you may have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your account and associated data</li>
+        <li>Opt out of push notifications at any time via your device settings</li>
+        <li>Opt out of personalized advertising via your device's ad settings</li>
+      </ul>
+      <p>To exercise any of these rights, contact us using the information below.</p>
+    </section>
+
+    <section>
+      <h2>8. Children's Privacy</h2>
+      <p>Mystic Tarot is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will promptly delete it.</p>
+    </section>
+
+    <section>
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <div class="contact-card">
+      <h2>10. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or your data, please reach out:</p>
+      <p><a href="mailto:contact@mystictarot.app">contact@mystictarot.app</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer>
+      <p>© 2026 Mystic Tarot. All rights reserved.</p>
+      <p>Made with <span>✦</span> under the stars</p>
+    </footer>
+  </div>
+</body>
+</html>
